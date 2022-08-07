@@ -23,6 +23,7 @@ window.onload = function() {
             }
 
             reader.readAsDataURL(file);	
+
         } else {
             fileDisplayArea.innerHTML = "File not supported!"
         }
@@ -34,12 +35,14 @@ function checksize() {
     const grafika = document.getElementsByClassName('img-fluid')[0];
     const grafikawidth = grafika.offsetWidth;
     const grafikaheight = grafika.offsetHeight;
-    const width300 = (grafikawidth/300)*2.54;
-    const height300 = (grafikaheight/300)*2.54;
-    const width150 = (grafikawidth/150)*2.54;
-    const height150 = (grafikaheight/150)*2.54;
-    const width75 = (grafikawidth/75)*2.54;
-    const height75 = (grafikaheight/75)*2.54;
+    const width300 = ((grafikawidth/300)*2.54).toFixed(2);
+    const height300 = ((grafikaheight/300)*2.54).toFixed(2);
+    const width150 = ((grafikawidth/150)*2.54).toFixed(2);
+    const height150 = ((grafikaheight/150)*2.54).toFixed(2);
+    const width75 = ((grafikawidth/75)*2.54).toFixed(2);
+    const height75 = ((grafikaheight/75)*2.54).toFixed(2);
+
+
     document.getElementById('grafikawpx').innerHTML = grafikawidth;
     document.getElementById('grafikahpx').innerHTML = grafikaheight;
     document.getElementById('wynik300').innerHTML = width300 + " x " + height300;
