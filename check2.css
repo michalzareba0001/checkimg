@@ -1,5 +1,69 @@
-#fileDisplayArea{
+.maingrid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(70, 150, 200, 1)
+}
+
+.selectImage {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(70, 150, 200, 1)
+}
+
+.selectImage input {
+    width: 100%;
+    border: none;
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 25%;
+}
+
+.guzik {
+    background-color: rgba(70, 150, 200, 1);
+    grid-column: 2 / 3;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.guzik button {
+    font-size: 1.1em;
+}
+
+.wynik{
+    grid-column: 3 / 4;
+    grid-row: 2 /3;
+    background-color: rgba(70, 150, 200, 1);
+
+}
+
+.grafika{
+    grid-column: 1 / 4;
+    grid-row: 4;
     height: 100%;
     border: 1px solid #000;
     overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

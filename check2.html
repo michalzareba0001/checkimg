@@ -2,37 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Check image </title>
-    <link rel="stylesheet" href="check2.css" type="text/css">
-    <script src="check2.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Check image </title>
+  <link rel="stylesheet" href="check2.css" type="text/css">
+  <script src="check2.js"></script>
 </head>
 
 <body>
-	<h1>Image File Reader</h1>
-	<div>
-		Select an image file: 
-		<input type="file" id="fileInput">
-	</div>
-	<div id="fileDisplayArea" class="grafika"></div>
+  <div class="maingrid">
+    <div class="header">
+      <h1>Check your image quality</h1><br />
+      <p>
+        Heare you can check if your image is good enough for printing.
+      </p>
+    </div>
+
+    <div class="selectImage">
+      <input type="file" id="fileInput">
+
+    </div>
+
     <div class="guzik">
-        <button type="button" name="button" id="sprawdz" onclick="checksize()">Check Quality</button>
-      </div>
-      <div class="wynik">
-        <p> Image size <span id="grafikawpx"></span> px x <span id="grafikahpx"></span> px.
-        <h3 class="dpi300"> Great quality - 300 dpi: </h3>
-        <p class="dpi300"><span id="wynik300"></span> cm</p>
-        <h3 class="dpi150"> Good quality - 150 dpi: </h3>
-        <p class="dpi150"><span id="wynik150"></span> cm</p>
-        <h3 class="dpi75"> Poor quality - 75 dpi: </h3>
-        <p class="dpi75"><span id="wynik75"></span> cm</p>
-    
-    
-    
-    
-      </div>
+      <button type="button" name="button" id="sprawdz" onclick="checksize()">Check Quality</button>
+    </div>
+
+    <div id="fileDisplayArea" class="grafika"></div>
+
+    <div class="wynik">
+      <p> Image size <span id="grafikawpx"></span> px x <span id="grafikahpx"></span> px.
+      <h3 class="dpi300"> Great quality - 300 dpi: </h3>
+      <p class="dpi300"><span id="wynik300"></span> cm</p>
+      <h3 class="dpi150"> Good quality - 150 dpi: </h3>
+      <p class="dpi150"><span id="wynik150"></span> cm</p>
+      <h3 class="dpi75"> Poor quality - 75 dpi: </h3>
+      <p class="dpi75"><span id="wynik75"></span> cm</p>
+    </div>
+  </div>
 </body>
 
 </html>
