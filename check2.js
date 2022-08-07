@@ -15,7 +15,9 @@ window.onload = function() {
                 fileDisplayArea.innerHTML = "";
 
                 var img = new Image();
+                
                 img.src = reader.result;
+                img.classList.add('img-fluid');
 
                 fileDisplayArea.appendChild(img);
             }
@@ -29,8 +31,8 @@ window.onload = function() {
 }
 
 function checksize() {
-    const grafika = document.getElementById('fileDisplayArea');
-    const grafikawidth = grafika.scrollWidth;
+    const grafika = document.getElementsByClassName('img-fluid')[0];
+    const grafikawidth = grafika.offsetWidth;
     const grafikaheight = grafika.offsetHeight;
     const width300 = (grafikawidth/300)*2.54;
     const height300 = (grafikaheight/300)*2.54;
